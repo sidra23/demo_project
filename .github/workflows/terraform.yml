@@ -22,6 +22,5 @@ jobs:
       - name: Terraform Apply
         run: terraform apply -auto-approve
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TF_VAR_github_token: ${{ secrets.GITHUB_TOKEN }}
+          TF_VAR_github_token: ${{ secrets.TF_GITHUB_TOKEN }}  # Use the PAT here
           TF_VAR_github_owner: ${{ github.repository_owner }}
